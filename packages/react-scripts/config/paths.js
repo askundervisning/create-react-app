@@ -78,7 +78,6 @@ module.exports = {
   appTsBuildInfoFile: resolveApp('node_modules/.cache/tsconfig.tsbuildinfo'),
   swSrc: resolveModule(resolveApp, 'src/service-worker'),
   publicUrlOrPath,
-  commonJs: resolveApp('../common/js'),
 };
 
 // @remove-on-eject-begin
@@ -109,7 +108,6 @@ module.exports = {
   ownNodeModules: resolveOwn('node_modules'), // This is empty on npm 3
   appTypeDeclarations: resolveApp('src/react-app-env.d.ts'),
   ownTypeDeclarations: resolveOwn('lib/react-app.d.ts'),
-  commonJs: resolveApp('../common/js'),
 };
 
 const ownPackageJson = require('../package.json');
@@ -148,7 +146,6 @@ if (
     ownNodeModules: resolveOwn('node_modules'),
     appTypeDeclarations: resolveOwn(`${templatePath}/src/react-app-env.d.ts`),
     ownTypeDeclarations: resolveOwn('lib/react-app.d.ts'),
-    commonJs: resolveApp(`${templatePath}/../common/js`),
   };
 }
 // @remove-on-eject-end
